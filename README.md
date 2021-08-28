@@ -15,7 +15,17 @@ Use the commands
 Hopw to change termux terminal should look like Kali Linux Terminal?
 Paste the command in the location <b>/data/data/com.termux/files/usr/etc/bash.bashrc</b> the commands... Where to paste? for that you need to watch the video.
 
+<h2>Script to add Kali LInux Terminal in Termux</h2>
+<b>nano /data/data/com.termux/files/usr/etc/bash.bashrc</b>
 <pre>
-nano /data/data/com.termux/files/usr/etc/bash.bashrc
-PS1='\[\e[1;34m\]\e[32m┌──\e[0m\e[92m(\e[0m\e[37mKALI\e[0m\e[5m💀\e[25m\e[37mLINUX\e[0m\e[92m)\e[0m\e[32m-\e[0m[~]\n\e[32m└─\e[0m\e[92m≽\e[0m \[\e[0;37m\]'
+EMOJIS=(🥱 😏 😎 👊  👍 💀️ 😉️ 🤔️ 🙄️ 😣️ 😳️ 💥 🔥 😵‍ 💫 ㉿)
+RANDOM_EMOJI() {
+  SELECTED_EMOJI=${EMOJIS[$RANDOM % ${#EMOJIS[@]}]};
+  echo $SELECTED_EMOJI;
+}
+#Normal Withour imoji
+#PS1='\[\e[1;34m\]\e[92m\]┌──(\e[37m\]Kali💀️Linux\e[92m\])-\e[0m\]\e[92m\][\e[0m\]\e[37m\]~\e[0m\]\e[92m\]]\e[0m\]\e[0m\]\e[92m\]\n└─≽ \[\e[0;37m\]'
+
+#With imoji animation
+#PS1='\[\e[1;34m\]\e[92m\]┌──(\e[37m\]EFX$(RANDOM_EMOJI)Tv\e[92m\])-\e[0m\]\e[92m\][\e[0m\]\e[37m\]~\e[0m\]\e[92m\]]\e[0m\]\e[0m\]\e[92m\]\n└─≽ \[\e[0;37m\]'
 </pre>
