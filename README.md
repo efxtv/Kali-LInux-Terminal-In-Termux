@@ -22,10 +22,14 @@ EMOJIS=(🥱 😏 😎 👊  👍 💀️ 😉️ 🤔️ 🙄️ 😣️ 😳�
 RANDOM_EMOJI() {
   SELECTED_EMOJI=${EMOJIS[$RANDOM % ${#EMOJIS[@]}]};
   echo $SELECTED_EMOJI;
-}
-#Normal Withour imoji
-#PS1='\[\e[1;34m\]\e[92m\]┌──(\e[37m\]Kali💀️Linux\e[92m\])-\e[0m\]\e[92m\][\e[0m\]\e[37m\]~\e[0m\]\e[92m\]]\e[0m\]\e[0m\]\e[92m\]\n└─≽ \[\e[0;37m\]'
+} </pre></pre>
 
-#With imoji animation
-#PS1='\[\e[1;34m\]\e[92m\]┌──(\e[37m\]EFX$(RANDOM_EMOJI)Tv\e[92m\])-\e[0m\]\e[92m\][\e[0m\]\e[37m\]~\e[0m\]\e[92m\]]\e[0m\]\e[0m\]\e[92m\]\n└─≽ \[\e[0;37m\]'
+
+#Place any one at the end of the file
+#Normal Withour imoji
+<pre>PS1='\[\e[1;34m\]\e[92m\]┌──(\e[37m\]Kali💀️Linux\e[92m\])-\e[0m\]\e[92m\][\e[0m\]\e[37m\]~\e[0m\]\e[92m\]]\e[0m\]\e[0m\]\e[92m\]\n└─≽ \[\e[0;37m\]'
+</pre>
+
+<pre>#With imoji animation
+ PS1='\[\e[1;34m\]\e[92m\]┌──(\e[37m\]EFX$(RANDOM_EMOJI)Tv\e[92m\])-\e[0m\]\e[92m\][\e[0m\]\e[37m\]~\e[0m\]\e[92m\]]\e[0m\]\e[0m\]\e[92m\]\n└─≽ \[\e[0;37m\]'
 </pre>
