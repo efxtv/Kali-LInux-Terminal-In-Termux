@@ -7,8 +7,8 @@ Change termux terminal look like Kali LInux or better. No external git required,
 
 Hopw to copy the color properties as shown in the video?
 Use the commands
-
-<pre> cd .termx</pre>
+<pre> cd $HOME </pre>
+<pre> cd .termux</pre>
 <pre> cp colors.properties ../;rm colors.properties</pre>
 <pre> wget https://raw.githubusercontent.com/efxtv/Kali-LInux-Terminal-In-Termux/main/colors.properties </pre>
 
