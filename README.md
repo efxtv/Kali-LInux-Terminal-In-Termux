@@ -33,3 +33,4 @@ RANDOM_EMOJI() {
 <pre>#With imoji animation
  PS1='\[\e[1;34m\]\e[92m\]┌──(\e[37m\]EFX$(RANDOM_EMOJI)Tv\e[92m\])-\e[0m\]\e[92m\][\e[0m\]\e[37m\]~\e[0m\]\e[92m\]]\e[0m\]\e[0m\]\e[92m\]\n└─≽ '
 </pre>
+<a href="https://youtu.be/qDU-N_YvvIE"><img src="https://raw.githubusercontent.com/efxtv/Kali-LInux-Terminal-In-Termux/main/Customize%20Termux%20Black%20Shell%20Make%20Termux%20terminal%20Look%20Like%20Kali%20Linux%20Nethunter.png" alt="Termux kali linux" ;"></a>
