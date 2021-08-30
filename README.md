@@ -31,5 +31,5 @@ RANDOM_EMOJI() {
 </pre>
 
 <pre>#With imoji animation
- PS1='\[\e[1;34m\]\e[92m\]┌──(\e[37m\]EFX$(RANDOM_EMOJI)Tv\e[92m\])-\e[0m\]\e[92m\][\e[0m\]\e[37m\]~\e[0m\]\e[92m\]]\e[0m\]\e[0m\]\e[92m\]\n└─≽ \[\e[0;37m\]'
+ PS1='\[\e[1;34m\]\e[92m\]┌──(\e[37m\]EFX$(RANDOM_EMOJI)Tv\e[92m\])-\e[0m\]\e[92m\][\e[0m\]\e[37m\]~\e[0m\]\e[92m\]]\e[0m\]\e[0m\]\e[92m\]\n└─≽ '
 </pre>
