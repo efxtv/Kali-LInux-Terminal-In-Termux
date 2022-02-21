@@ -9,6 +9,7 @@ Hopw to copy the color properties as shown in the video?
 Use the commands
 <pre> cd $HOME </pre>
 <pre> cd .termux</pre>
+# note: color7 is the text color for termux input
 <pre> cp colors.properties ../;rm colors.properties</pre>
 <pre> wget https://raw.githubusercontent.com/efxtv/Kali-LInux-Terminal-In-Termux/main/colors.properties </pre>
 
