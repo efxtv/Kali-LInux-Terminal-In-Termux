@@ -28,7 +28,7 @@ RANDOM_EMOJI() {
 
 #Place any one at the end of the file
 #Normal Withour imoji
-<pre>PS1='\[\e[1;34m\]\e[92m\]┌──(\e[37m\]Kali💀️Linux\e[92m\])-\e[0m\]\e[92m\][\e[0m\]\e[37m\]~\e[0m\]\e[92m\]]\e[0m\]\e[0m\]\e[92m\]\n└─≽ \e[0m\]'
+<pre>PS1='\[\e[1;34m\]\[\e[92m\]┌──(\[\e[37m\]EFX💀️Tv\[\e[92m\])-\[\e[0m\]\[\e[92m\][\e[0m\]\[\e[37m\]~\[\e[0m\]\[\e[92m\]]\[\e[0m\]\[\[\e[0m\]\e[92m\]\n└─≽ \[\e[0m\]'
 </pre>
 
 <pre>#With imoji animation
