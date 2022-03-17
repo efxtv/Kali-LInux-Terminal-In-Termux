@@ -28,10 +28,18 @@ RANDOM_EMOJI() {
 
 #Place any one at the end of the file
 #Normal Withour imoji
-PS1='\[\e[1;34m\]\[\e[92m\]┌──(\[\e[37m\]Kali💀️Linux\[\e[92m\])-\[\e[0m\]\[\e[92m\][\e[0m\]\[\e[37m\]~\[\e[0m\]\[\e[92m\]]\[\e[0m\]\[\[\e[0m\]\n\[\e[92m\]└─≽ \[\e[0m\]'
+<pre>PS1='\[\e[1;34m\]\[\e[92m\]┌──(\[\e[37m\]Kali💀️Linux\[\e[92m\])-\[\e[0m\]\[\e[92m\][\e[0m\]\[\e[37m\]\w\[\e[0m\]\[\e[92m\]]\[\e[0m\]\[\[\e[0m\]\n\[\e[92m\]└─≽ \[\e[0m\]'
 </pre>
 
 <pre>#With imoji animation
  PS1='\[\e[1;34m\]\e[92m\]┌──(\e[37m\]EFX$(RANDOM_EMOJI)Tv\e[92m\])-\e[0m\]\e[92m\][\e[0m\]\e[37m\]~\e[0m\]\e[92m\]]\e[0m\]\e[0m\]\e[92m\]\n└─≽ '
 </pre>
+
+You can replace -w with as per your need:
+<pre>Time12h="\T"
+Time12a="\@"
+PathShort="\w"
+PathFull="\W"
+NewLine="\n"
+Jobs="\j"</pre>
 
