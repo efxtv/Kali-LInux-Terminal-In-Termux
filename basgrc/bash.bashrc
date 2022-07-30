@@ -10,17 +10,20 @@ shopt -s histappend
 shopt -s histverify
 export HISTCONTROL=ignoreboth
 
+su3(){
 #animation start
-#EMOJIS=(🥱 😏 😎 👊  👍 💀️ 😉️ 🤔️ 🙄️ 😣️ 😳️ 💥 🔥 😵‍ ㉿)
-#RANDOM_EMOJI() {
-#  SELECTED_EMOJI=${EMOJIS[$RANDOM % ${#EMOJIS[@]}]};
-#  echo $SELECTED_EMOJI;
-#} 
+EMOJIS=(🥱 😏 😎 👊  👍 💀️ 😉️ 🤔️ 🙄️ 😣️ 😳️ 💥 🔥 😵‍ ㉿)
+RANDOM_EMOJI() {
+  SELECTED_EMOJI=${EMOJIS[$RANDOM % ${#EMOJIS[@]}]};
+  echo $SELECTED_EMOJI;
+} 
 #anomation end
-
 PROMPT_DIRTRIM=2
-#PS1='\[\e[0;31m\]\[\e[0;31m\]┌──(\[\e[0;91m\]EFX$(RANDOM_EMOJI)Tv\[\e[0;31m\])\[\e[0;31m\]-\[\e[0;31m\]\[\e[0;31m\][\e[0m\]\[\e[0;33m\]\w\[\e[0m\]\[\e[0;31m\]]\[\e[0m\]\[\[\e[0m\]\n\[\e[0;31m\]└\[\e[0;31m\]●\[\e[0;37m\]●\[\e[0;32m\]● \[\e[0m\]'
+PS1='\[\e[0;31m\]\[\e[0;31m\]┌──(\[\e[0;91m\]EFX$(RANDOM_EMOJI)Tv\[\e[0;31m\])\[\e[0;31m\]-\[\e[0;31m\]\[\e[0;31m\][\e[0m\]\[\e[0;33m\]\w\[\e[0m\]\[\e[0;31m\]]\[\e[0m\]\[\[\e[0m\]\n\[\e[0;31m\]└\[\e[0;31m\]●\[\e[0;37m\]●\[\e[0;32m\]● \[\e[0m\]'
+}
+
 #mms ps1 starts
+
 fro=$(free -h|grep Mem|awk '{print $4}')
 mmo=$(ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head -10|grep -v PID|awk '{print $NF" "$1}'|sort -rk3|sed 's#^#MMS #g'|head -1)
 
@@ -51,6 +54,15 @@ alias tab='column -t'
 alias reload='termux-reload-settings'
 alias remove='pkg remove'
 alias i='pkg install'
+kali(){
+PS1='\[\e[0;31m\]\[\e[0;32m\]┌──(\[\e[0;36m\]Kali💀️Linux\[\e[0;31m\]\[\e[0;32m\])\[\e[0;31m\]-\[\e[0;31m\]\[\e[0;32m\][\e[0m\]\[\e[0;37m\]\w\[\e[0m\]\[\e[0;32m\]]\[\e[0m\]\[\[\e[0m\]\n\[\e[0;32m\]└─$\[\e[0m\]'
+}
+su(){
+PS1='\[\e[1;32m\](\[\e[1;31m\]root@127.0.0.1\[\e[33;0m\]\[\e[1;32m\])─────┐\n ┌───────────────────┘ \n ├[\[\e[1;33m\]\w\[\e[1;32m\]]\n \[\e[1;32m\]└─▶\[\e[0m\] '
+}
+su2(){
+PS1='`if [ $? = 0 ]; then echo "\[\033[01;32m\]┌[✔]"; else echo "\[\033[01;32m\]┌[\[\033[01;31m\]✘\[\033[01;32m\]]"; fi`\[\033[01;32m\]─(\[\033[01;31m\]root\[\033[01;32m\])┐\[\033[01;32m\] \n└──────────┘\[\033[35m\]$(__git_ps1 " %s") \[\033[01;32m\]\n  ┌[\w]\n  \[\033[01;32m\]└───────$\[\033[00m\]'
+}
 ip(){
 ifconfig|grep inet|sed 's#inet 127.0.0.1#LOCAL 127.0.0.1#g;s#inet 192#BEIDG 192#g;s#inet#OTHER#g'|awk '{print "\033[0;32m"$1":\033[0m","\t"$2,"\t"$4}'
 }
@@ -67,13 +79,38 @@ la(){
 ls -lath|awk '{print "\033[0;32m"$1"\033[0m"" "$7"-"$6"-("$8")",$5,$NF}'|sed -e "1d"|sed "1i $(tput setaf 8)PERMISSIONS MODIFIED K/M FILE-NAME$(tput sgr0)"|column -t
 }
 
+lh(){
+cl='\033[0m'
+Green='\033[0;32m'
+Yellow='\033[0;33m'
+du -sh * 2>/dev/null|awk {'print "\033[0;32m"$1"\033[0m",$NF'}|column -t
+}
+
+
 absolute(){
 echo -e "$PWD/$1"
 }
 
-alias code='pv -qL 15'
-
+alias code='pv -qL 6' #slow and best
+alias codef='pv -qL 10' #fast
+alias code2='pv -qL $[10+(-2 + RANDOM%5)]'
+alias code3='pv -qL $[10+(-2 + RANDOM%5)]'
+#code three can skip the characters \b\b\b\ will skip 4 characters
+#example: echo -e "You are a goog\b\b\b\lovely person" | pv -qL $[10+(-2 + RANDOM%5)]
 center()
 {
 echo -e "$1"|sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta"
+}
+
+pcurl (){
+curl --socks5 127.0.0.1:9050 https://check.torproject.org |& grep -Po "(?<=strong>)[\d\.]+(?=</strong)"|sed 's/^/IP Changed with────────────────────█──<><><>───[ /g'|sed 's/$/ ]/g'
+curl --socks5 127.0.0.1:9050 $1 --output $2
+}
+
+server(){
+python2 -m SimpleHTTPServer 8000
+}
+
+phpserver(){
+php -S localhost:8000
 }
